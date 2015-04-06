@@ -14,25 +14,43 @@ Add TOC
 
 ## Don't use self when not neccessary
 
+**Preffered**  
+```swift
+data = [Int]()
+```
+
+**Not Preffered**  
+```swift
+self.data = [Int]()
+ ```
  
 ## Don't speciofy Double numbers `.0` when not neccesary
 
-**Preffered**
+**Preffered**  
+```swift
 CGRectMake(0, 0, 150, 40))
+```
 
-**Not Preffered**
+**Not Preffered**   
+```swift
 CGRectMake(0.0, 0.0, 150.0, 40.0))
+```
 
 ##Selector
 
-**Preffered**
+**Preffered**  
+```swift
 "readOnly:"
+```
 
-**Not Preffered**
+**Not Preffered**  
+```swift
 NSSelectorFromString("readOnly:")
-
+```
 
 ## Use extensions to separate code sections instead for #paragma marks
+
+
 
 
 ##Lazy properites
