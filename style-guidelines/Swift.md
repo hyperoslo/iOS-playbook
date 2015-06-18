@@ -494,16 +494,6 @@ Do not write multiple statements on a single line separated with semicolons.
 
 The only exception to this rule is the `for-conditional-increment` construct, which requires semicolons. However, alternative `for-in` constructs should be used where possible.
 
-## Resource code
-
-In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
-
-```swift
-struct ColorList {
-  static let someColor = UIColor(hex: "343434")
-}
-```
-
 **Preferred:**
 ```swift
 var swift = "not a scripting language"
@@ -515,6 +505,18 @@ var swift = "not a scripting language";
 ```
 
 **NOTE**: Swift is very different to JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
+
+
+## Resource code
+
+In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
+
+```swift
+struct ColorList {
+  static let someColor = UIColor(hex: "343434")
+}
+```
+
 
 ## Attribution
 
