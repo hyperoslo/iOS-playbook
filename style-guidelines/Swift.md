@@ -23,6 +23,7 @@ Our overarching goals are conciseness, readability, and simplicity.
   * [Syntactic Sugar](#syntactic-sugar)
 * [Control Flow](#control-flow)
 * [Semicolons](#semicolons)
+* [Resource code](#resource-code)
 * [Attribution](#attribution)
 
 
@@ -492,6 +493,16 @@ Swift does not require a semicolon after each statement in your code. They are o
 Do not write multiple statements on a single line separated with semicolons.
 
 The only exception to this rule is the `for-conditional-increment` construct, which requires semicolons. However, alternative `for-in` constructs should be used where possible.
+
+## Resource code
+
+In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
+
+```swift
+struct ColorList {
+  static let someColor = UIColor(hex: "343434")
+}
+```
 
 **Preferred:**
 ```swift
