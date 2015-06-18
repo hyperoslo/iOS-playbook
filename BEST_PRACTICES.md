@@ -102,6 +102,16 @@ For example instead of `HYPRecipesTableViewController` you would do `HYPRecipesC
 
 - It's better practice to call `dismissViewControllerAnimated:completion:` in the `UIViewController` that did the presenting, not in the `UIViewController` that was presented.
 
+## Resource code
+
+In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom color and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
+
+```swift
+struct ColorList {
+  static let someColor = UIColor(hex: "343434")
+}
+```
+
 ## Assets
 
 ### Images
