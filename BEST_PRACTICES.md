@@ -105,7 +105,7 @@ For example instead of `HYPRecipesTableViewController` you would do `HYPRecipesC
 
 ## Resource code
 
-In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom color and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
+In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
 
 ```swift
 struct ColorList {
