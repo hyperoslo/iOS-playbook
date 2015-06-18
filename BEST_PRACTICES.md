@@ -7,6 +7,7 @@
 * [Comments](#comments)
 * [Blocks, delegates or data source](#blocks-delegates-or-data-source)
 * [View controllers](#view-controllers)
+* [Resource code](#resource-code)
 * [Assets](#assets)
 
 ## Xcode
