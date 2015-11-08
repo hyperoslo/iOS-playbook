@@ -20,6 +20,9 @@ http://learnyouahaskell.com/
 - Principles of Reactive Programming  
 https://www.coursera.org/course/reactive
 
+- Mostly Adequate Guide to Functional Programming in Javascript
+https://drboolean.gitbooks.io/mostly-adequate-guide/
+
 - Dan Grossman’s Programming Languages Course  
 http://oleb.net/blog/2014/12/programming-languages-mooc/
 
