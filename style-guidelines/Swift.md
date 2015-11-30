@@ -61,9 +61,9 @@ func convertPointAt(#column: Int, #row: Int) -> CGPoint { ... }
 func timedAction(#delay: NSTimeInterval, perform action: SKAction) -> SKAction! { ... }
 
 // would be called like this:
-dateFromString("2014-03-14") { ... }
-convertPointAt(column: 42, row: 13) { ... }
-timedAction(delay: 1.0, perform: someOtherAction) { ... }
+dateFromString("2014-03-14")
+convertPointAt(column: 42, row: 13)
+timedAction(delay: 1.0, perform: someOtherAction)
 ```
 
 For methods, follow the standard Apple convention of referring to the first parameter in the method name:
