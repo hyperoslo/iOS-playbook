@@ -386,6 +386,12 @@ if let textContainer = textContainer {
 }
 ```
 
+Use guard unwrapping if the object is required for continuing the operation.
+
+```
+guard let requiredObject = object else { return }
+```
+
 When naming optional variables and properties, avoid naming them like `optionalString` or `maybeView` since their optional-ness is already in the type declaration.
 
 For optional binding, shadow the original name when appropriate rather than using names like `unwrappedView` or `actualLabel`.
