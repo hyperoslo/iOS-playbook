@@ -194,6 +194,9 @@ init(row: Int, column: Int) {
 }
 ```
 
+**tl;dr**
+Only use `self` when the language requires it.
+
 ### Protocol Conformance
 
 When adding protocol conformance to a class, prefer adding a separate class extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
