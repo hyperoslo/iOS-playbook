@@ -479,7 +479,7 @@ var faxNumber: Optional<Int>
 
 #### forEach
 
-Prefer the modern `forEach` style of iterating lists.
+Prefer `forEach` over `for-in` when applicable.
 
 **Preferred:**
 
