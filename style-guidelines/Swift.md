@@ -154,7 +154,7 @@ Additional capabilities of classes:
 
 ### Use of Self
 
-Use `self` when required, for example:
+Use `self` only when required, for example:
 
 - When using optional binding with optional properties
 
