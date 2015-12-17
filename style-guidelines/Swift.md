@@ -210,11 +210,13 @@ class MyViewcontroller: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
+
 extension MyViewcontroller: UITableViewDataSource {
   // table view data source methods
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension MyViewcontroller: UIScrollViewDelegate {
   // scroll view delegate methods
 }
