@@ -483,8 +483,18 @@ Prefer `forEach` over `for-in` when applicable.
 
 **Preferred:**
 
+Use named parameters when the object is being referenced more than once.
+
 ```swift
-attendeeList.forEach { attendee in print("\(attendee.name) is attending.") }
+attendeeList.forEach { attendee in 
+print("\(attendee.name) is attending with \(attendee.guests.count) guests.") 
+}
+```
+
+Anonymous parameters
+
+```swift
+[subview, anotherSubview].forEach { view.addSubview($0) }
 ```
 
 **Note**
