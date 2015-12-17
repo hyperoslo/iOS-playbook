@@ -502,7 +502,6 @@ Anonymous parameters
 There are some disadvantages to using `forEach` over `for-in` which you should probably be
 aware of.
 
-Reference:
 ```swift
 /// - Note: You cannot use the `break` or `continue` statement to exit the
 ///   current call of the `body` closure or skip subsequent calls.
@@ -510,7 +509,8 @@ Reference:
 ///   exit from the current call to `body`, not any outer scope, and won't
 ///   skip subsequent calls.
 ```
-(apple/swift/stdlib/public/core/Sequence.swift)[https://github.com/apple/swift/blob/master/stdlib/public/core/Sequence.swift#L119-L123]
+
+Reference: [apple/swift/stdlib/public/core/Sequence.swift](https://github.com/apple/swift/blob/master/stdlib/public/core/Sequence.swift#L119-L123)
 
 So if the operation demands more control, then use `for-in`.
 
