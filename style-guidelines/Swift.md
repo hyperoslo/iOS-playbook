@@ -154,19 +154,25 @@ Additional capabilities of classes:
 
 ### Use of Self
 
-Use `self` when required, for example:
+Use `self` only when required, for example:
 
 - When using optional binding with optional properties
 
 **Preferred:**
 
 ```swift
-if let textContainer = self.textContainer {
+if let textContainer = textContainer {
   // do many things with textContainer
 }
 ```
 
 **Not Preferred:**
+
+```swift
+if let textContainer = self.textContainer {
+  // do many things with textContainer
+}
+```
 
 ```swift
 if let maybeThisCouldBeTextContainer = textContainer {
@@ -188,6 +194,9 @@ init(row: Int, column: Int) {
 }
 ```
 
+**tl;dr**
+Only use `self` when the language requires it.
+
 ### Protocol Conformance
 
 When adding protocol conformance to a class, prefer adding a separate class extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
@@ -201,11 +210,13 @@ class MyViewcontroller: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
+
 extension MyViewcontroller: UITableViewDataSource {
   // table view data source methods
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension MyViewcontroller: UIScrollViewDelegate {
   // scroll view delegate methods
 }
@@ -370,9 +381,16 @@ textContainer?.textLabel?.setNeedsDisplay()
 Use optional binding when it's more convenient to unwrap once and perform multiple operations:
 
 ```swift
-if let textContainer = self.textContainer {
+if let textContainer = textContainer {
   // do many things with textContainer
 }
+```
+
+Use `guard` unwrapping if the object is required for continuing the operation.
+`guard` is prefered when doing early returns inside of a function.
+
+```
+guard let requiredObject = object else { return }
 ```
 
 When naming optional variables and properties, avoid naming them like `optionalString` or `maybeView` since their optional-ness is already in the type declaration.
@@ -460,6 +478,43 @@ var faxNumber: Optional<Int>
 
 ## Control Flow
 
+#### forEach
+
+Prefer `forEach` over `for-in` when applicable.
+
+**Preferred:**
+
+Use named parameters when the object is being referenced more than once.
+
+```swift
+attendeeList.forEach { attendee in 
+  print("\(attendee.name) is attending with \(attendee.guests.count) guests.") 
+}
+```
+
+Anonymous parameters
+
+```swift
+[subview, anotherSubview].forEach { view.addSubview($0) }
+```
+
+There are some disadvantages to using `forEach` over `for-in` which you should probably be
+aware of.
+
+```swift
+/// - Note: You cannot use the `break` or `continue` statement to exit the
+///   current call of the `body` closure or skip subsequent calls.
+/// - Note: Using the `return` statement in the `body` closure will only
+///   exit from the current call to `body`, not any outer scope, and won't
+///   skip subsequent calls.
+```
+
+Reference: [apple/swift/stdlib/public/core/Sequence.swift](https://github.com/apple/swift/blob/master/stdlib/public/core/Sequence.swift#L119-L123)
+
+So if the operation demands more control, then use `for-in`.
+
+#### for-in
+
 Prefer the `for-in` style of `for` loop over the `for-condition-increment` style.
 
 **Preferred:**
@@ -513,7 +568,7 @@ In `Swift` it's a good practice to use `struct` for accessing elements of asset 
 
 ```swift
 struct ColorList {
-  static let someColor = UIColor(hex: "343434")
+  static let someColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.8)
 }
 ```
 
