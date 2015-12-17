@@ -497,8 +497,6 @@ Anonymous parameters
 [subview, anotherSubview].forEach { view.addSubview($0) }
 ```
 
-**Note**
-
 There are some disadvantages to using `forEach` over `for-in` which you should probably be
 aware of.
 
