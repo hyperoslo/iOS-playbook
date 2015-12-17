@@ -161,12 +161,18 @@ Use `self` when required, for example:
 **Preferred:**
 
 ```swift
-if let textContainer = self.textContainer {
+if let textContainer = textContainer {
   // do many things with textContainer
 }
 ```
 
 **Not Preferred:**
+
+```swift
+if let textContainer = self.textContainer {
+  // do many things with textContainer
+}
+```
 
 ```swift
 if let maybeThisCouldBeTextContainer = textContainer {
