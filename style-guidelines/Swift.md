@@ -386,7 +386,8 @@ if let textContainer = textContainer {
 }
 ```
 
-Use guard unwrapping if the object is required for continuing the operation.
+Use `guard` unwrapping if the object is required for continuing the operation.
+`guard` is prefered when doing early returns inside of a function.
 
 ```
 guard let requiredObject = object else { return }
