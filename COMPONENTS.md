@@ -38,7 +38,11 @@ Take the time to compose personal tweets to all your recipients, copy pasting on
 
 A few examples:
 
-https://twitter.com/hyperoslo/status/585126444331835393, https://twitter.com/hyperoslo/status/585123729610510339, https://twitter.com/hyperoslo/status/585123389343424513, https://twitter.com/hyperoslo/status/585120710940557312, https://twitter.com/hyperoslo/status/585119588075044864
+[@Example](https://twitter.com/hyperoslo/status/585126444331835393),
+[@Another example](https://twitter.com/hyperoslo/status/585123729610510339), 
+[@One more example](https://twitter.com/hyperoslo/status/585123389343424513), 
+[@Yet another example](https://twitter.com/hyperoslo/status/585120710940557312), 
+[@Are you still reading examples?](https://twitter.com/hyperoslo/status/585119588075044864)
 
 - [ ] Send a tweet from the [@hyperoslo](https://twitter.com/hyperoslo) account with a tiny summary and attach the logo of the Pod
 - [ ] Send a tweet to [@maniacdev](https://twitter.com/maniacdev)
